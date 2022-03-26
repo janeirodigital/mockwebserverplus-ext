@@ -1,5 +1,7 @@
 package com.janeirodigital.mockwebserver;
 
+import lombok.Getter;
+import lombok.Setter;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.RecordedRequest;
 import org.apache.commons.text.StringSubstitutor;
@@ -8,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,12 +24,13 @@ import java.util.concurrent.TimeUnit;
  *
  * A value container that holds all information about the fixture file.
  */
+@Getter @Setter
 public class Fixture {
 
-    public int statusCode;
-    public String body;
-    public List<String> headers;
-    public int delay;
+    private int statusCode;
+    private String body;
+    private List<String> headers;
+    private int delay;
 
     /**
      * Parse the given filename and returns the Fixture object.
@@ -55,7 +59,7 @@ public class Fixture {
         try {
             return parser.parse(substitutor.replace(readPathIntoString(path)));
         } catch (IOException ex) {
-            throw new IllegalStateException("Test Harness: Error reading from " + path + ": " + ex.getStackTrace());
+            throw new IllegalStateException("Test Harness: Error reading from " + path + ": " + Arrays.toString(ex.getStackTrace()));
         }
     }
 

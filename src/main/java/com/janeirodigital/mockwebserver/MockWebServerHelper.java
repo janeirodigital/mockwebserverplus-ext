@@ -7,6 +7,8 @@ import java.net.URL;
 
 public class MockWebServerHelper {
 
+    private MockWebServerHelper() { }
+
     public static URL toUrl(MockWebServer server, String path) {
         try {
             return new URL(server.url(path).toString());

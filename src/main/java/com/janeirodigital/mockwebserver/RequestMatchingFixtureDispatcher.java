@@ -23,7 +23,7 @@ public class RequestMatchingFixtureDispatcher extends Dispatcher {
     }
 
     public RequestMatchingFixtureDispatcher() {
-        this.configuredFixtures = new ArrayList<DispatcherEntry>();
+        this.configuredFixtures = new ArrayList<>();
     }
 
     @NotNull

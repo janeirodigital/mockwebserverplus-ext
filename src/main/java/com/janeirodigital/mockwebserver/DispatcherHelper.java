@@ -5,6 +5,8 @@ import java.util.Map;
 
 public class DispatcherHelper {
 
+    private DispatcherHelper() { }
+
     public static boolean addFixture(RequestMatchingFixtureDispatcher dispatcher, List<String> fixtures, String method, String path, Map<String, List<String>> headers) {
         return dispatcher.getConfiguredFixtures().add(new DispatcherEntry(fixtures, method, path, headers));
     }
