@@ -27,6 +27,14 @@ public class DispatcherHelper {
         return dispatcher.getConfiguredFixtures().add(new DispatcherEntry(List.of(fixture), "PUT", path, null));
     }
 
+    public static boolean mockOnPost(RequestMatchingFixtureDispatcher dispatcher, String path, List<String> fixtures) {
+        return dispatcher.getConfiguredFixtures().add(new DispatcherEntry(fixtures, "POST", path, null));
+    }
+
+    public static boolean mockOnPost(RequestMatchingFixtureDispatcher dispatcher, String path, String fixture) {
+        return dispatcher.getConfiguredFixtures().add(new DispatcherEntry(List.of(fixture), "POST", path, null));
+    }
+
     public static boolean mockOnPatch(RequestMatchingFixtureDispatcher dispatcher, String path, List<String> fixtures) {
         return dispatcher.getConfiguredFixtures().add(new DispatcherEntry(fixtures, "PATCH", path, null));
     }
