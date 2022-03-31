@@ -4,7 +4,7 @@
 
     <groupId>com.janeirodigital</groupId>
     <artifactId>mockwebserverplus-ext</artifactId>
-    <version>0.9.3-SNAPSHOT</version>
+    <version>0.9.4-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
