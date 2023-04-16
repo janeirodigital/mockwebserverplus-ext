@@ -4,7 +4,7 @@
 
     <groupId>com.janeirodigital</groupId>
     <artifactId>mockwebserverplus-ext</artifactId>
-    <version>0.9.6</version>
+    <version>0.9.7-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,7 +26,7 @@
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
         <url>https://github.com/janeirodigital/mockwebserverplus-ext</url>
-        <tag>v0.9.6</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <dependencies>
